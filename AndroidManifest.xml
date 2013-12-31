@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.myblog.HomeActivity"
+            android:name="com.rohanapps.myblog.HomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +24,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.myblog.AddPostActivity"
+            android:name="com.rohanapps.myblog.AddPostActivity"
             android:label="@string/title_activity_add_post" >
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.myblog.HomeActivity" />
         </activity>
 
         <meta-data

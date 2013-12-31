@@ -1,4 +1,4 @@
-package com.example.myblog;
+package com.rohanapps.myblog;
 
 import java.util.List;
 
@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.activeandroid.query.Select;
+import com.example.myblog.R;
 
 public class HomeActivity extends Activity {
 
@@ -27,22 +28,26 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_home_page);
-
+		
+		//the addpostactivity intent
 		Intent intent = getIntent();
 		title = intent.getStringExtra(AddPostActivity.POST_TITLE);
 		content = intent.getStringExtra(AddPostActivity.POST_CONTENT);
 
 		if ((title != null && !title.isEmpty()) && (content != null && !content.isEmpty())) {
-
+			
+			//adding blogpost db entry
 			BlogPost blogPost = new BlogPost();
 			blogPost.title = title;
 			blogPost.content = content;
 			blogPost.save();
 		}
-		
+
+		// loading and concatenating the data from the database
 		loadContent();
 	}
-
+	
+	//ActiveAndroid db query
 	public static List<BlogPost> getPosts() {
 		return new Select().from(BlogPost.class)
 		// .orderBy("id ASC")
