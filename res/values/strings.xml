@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Rohan Bhangui\'s Blog</string>
+    <string name="action_add_post">Add Post</string>
+    <string name="title_activity_add_post">AddPost</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
