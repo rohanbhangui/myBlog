@@ -12,8 +12,8 @@ import android.widget.EditText;
 
 public class AddPostActivity extends Activity {
 
-	public final static String POST_TITLE = "com.example.myBlog.POSTTITLE";
-	public final static String POST_CONTENT = "com.example.myBlog.POSTCONTENT";
+	public final static String POST_TITLE = "com.rohanapps.myBlog.POSTTITLE";
+	public final static String POST_CONTENT = "com.rohanapps.myBlog.POSTCONTENT";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
